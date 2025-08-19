@@ -8,8 +8,15 @@
 
 
 
+@import "@fontsource/irish-grover";
+
+@import "@fontsource/irish-grover/400.css"; 
 
 
 @theme {
   --font-inter: "Inter", sans-serif;
+}
+
+@theme {
+  --font-irish: 'Irish Grover', cursive;
 }
