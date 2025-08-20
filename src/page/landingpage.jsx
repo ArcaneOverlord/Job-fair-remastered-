@@ -1,10 +1,11 @@
 
-import MenuItem from './menuitem';
-import Button from './Button'
-import LandingPageBody from "./landingpagebody";
-import Title from './title';
+import MenuItem from '../components/menuitem';
+import Button from '../components/Button'
+import LandingPageBody from "../components/landingpagebody";
+import Title from '../components/title';
 
 const LandingPage =() => {
+
   return(
     <div className="h-screen w-screen bg-[url('/images/Vector.png')] flex
     flex-col">
@@ -33,7 +34,8 @@ const LandingPage =() => {
         </ul>
       </nav>
       <div className='justify-self-end items-center'>
- <Button label="Register" className={`bg-[#06B6D4] min-w-35 min-h-10 rounded-2xl text-black`} />
+ <Button label="Register" className={`bg-[#06B6D4] min-w-35 min-h-10 rounded-2xl text-black`} 
+      handleClick={'/Registration'}/>
   
 
       </div>

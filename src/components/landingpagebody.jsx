@@ -3,8 +3,8 @@ import EmployerTemplate from "./employerTemplate";
 
 
 
-
 const LandingPageBody =() => {
+   
     return(
         <div className="grid grid-rows-[1fr_auto_auto] gap-6">
             <main className="flex justify-center flex-row min-h-[50vh]">
@@ -20,7 +20,9 @@ const LandingPageBody =() => {
                         interviews.
                     </p>
                     <div className="flex flex-row gap-x-11 mt-4">
-                    <Button label="Register Now" className={`bg-[#06B6D4] min-w-35 min-h-10 rounded-2xl text-black`}/>
+                    <Button label="Register Now" 
+                    className={`bg-[#06B6D4] min-w-35 min-h-10 rounded-2xl text-black`} 
+                    handleClick={'/Registration'}/>
                     <Button label="Browse Employers" className={`bg-[#333333] min-w-40 min-h-10 rounded-2xl text-[#C4C4C4]`}/>
                     </div>
                 </div>
