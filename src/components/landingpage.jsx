@@ -6,7 +6,7 @@ import Title from './title';
 
 const LandingPage =() => {
   return(
-    <div className="h-screen w-screen bg-[url('./src/public/images/Vector.png')] flex
+    <div className="h-screen w-screen bg-[url('./public/images/Vector.png')] flex
     flex-col">
       
      <header className='items-center  h-[15%] w-screen text-white font-inter 
