@@ -24,9 +24,13 @@ const LandingPageBody =() => {
                     <Button label="Browse Employers" className={`bg-[#333333] min-w-40 min-h-10 rounded-2xl text-[#C4C4C4]`}/>
                     </div>
                 </div>
-                <div className=" min-w-[33%]  bg-gray-800 mr-17">
+                <div className=" min-w-[33%] mr-17">
                     <h3 className="text-white text-1xl">Featured Employers</h3> 
-                    <EmployerTemplate/>
+                    <div className="flex flex-col gap-y-3"> 
+                    <EmployerTemplate companyName={"hybrid"} compLocation={"hydrbad"} roles={5}/>
+                    <EmployerTemplate companyName={"hybrid"} compLocation={"hydrbad"} roles={5}/>
+                    <EmployerTemplate companyName={"hybrid"} compLocation={"hydrbad"} roles={5}/>
+                    </div>
                 </div>
 
             </main>
