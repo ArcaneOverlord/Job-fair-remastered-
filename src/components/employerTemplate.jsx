@@ -9,7 +9,7 @@ const EmployerTemplate = ({compImg,alt,companyName,roles,compLocation}) => {
                : 
                (
                    <img className="rounded-full flex object-cover h-full w-full" 
-                   src= "/public/images/compfallback.png"
+                   src= "/images/compfallback.png"
                    alt="company"/>
      
                )}
