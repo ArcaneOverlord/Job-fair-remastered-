@@ -18,7 +18,7 @@ const EmployerTemplate = ({compImg,alt,companyName,roles,compLocation}) => {
 
             <div className="justify-center  flex flex-col ">
                 <p className="text-2xl">{companyName}</p>
-                <p className="text-[#D9D9D9]">Open Roles:{roles}&nbsp; &bull; &nbsp;HQ:{compLocation}</p>
+                <p className="text-[#D9D9D9]">Open Roles:&nbsp;{roles}&nbsp;&nbsp; &bull; &nbsp;&nbsp;HQ:&nbsp;{compLocation}</p>
 
             </div>
             

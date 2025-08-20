@@ -1,19 +1,20 @@
 
-import MenuItem from './menubar';
+import MenuItem from './menuitem';
 import Button from './Button'
 import LandingPageBody from "./landingpagebody";
+import Title from './title';
 
 const LandingPage =() => {
   return(
-    <div className="h-screen w-screen bg-[url('./src/assets/images/Vector.png')] flex
+    <div className="h-screen w-screen bg-[url('./src/public/images/Vector.png')] flex
     flex-col">
       
      <header className='items-center  h-[15%] w-screen text-white font-inter 
       gap-3 grid grid-cols-[auto_1fr_auto] pr-[5%] pl-[5%]'>
-      <h1 className='justify-self-start
-       items-center text-4xl text-start font-irish'>
-        JobFair
-      </h1>
+      <div className='justify-self-start
+       items-center'>
+        <Title/>
+      </div>
       <nav className='justify-self-center'>
         <ul className='flex flex-row  gap-14'>
           <li>
@@ -28,7 +29,7 @@ const LandingPage =() => {
           <li>
             <MenuItem name="Speakers"/>
           </li>
-
+ 
         </ul>
       </nav>
       <div className='justify-self-end items-center'>
