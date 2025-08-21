@@ -1,6 +1,7 @@
-
+import { useNavigate } from "react-router-dom";
 function MenuItem({handleClick, name}) {
-    return <button onClick={handleClick} className="hover:underline cursor-pointer">{name}</button>
+    const navigation=useNavigate();
+    return <button onClick={() => navigation(`${handleClick}`)} className="hover:underline cursor-pointer">{name}</button>
 }
 
 export default MenuItem;

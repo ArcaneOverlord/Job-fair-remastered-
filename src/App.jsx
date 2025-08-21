@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import LandingPage from "./page/landingpage";
 import RegistrationPage from "./page/registrationpage";
+import ThemeToggle from "./components/theme";
+
 
 const Router= createBrowserRouter([
   {
@@ -16,11 +18,11 @@ const Router= createBrowserRouter([
 
 function App (){
   return(
-    <div>
+    <div className="h-screen w-screen  bg-dark dark:bg-light text-light-text dark:text-dark-text">
       
       <RouterProvider router={Router}/>
    
-      
+   
     </div>
   
   )

@@ -7,10 +7,10 @@ import Title from '../components/title';
 const LandingPage =() => {
 
   return(
-    <div className="h-screen w-screen bg-[url('/images/Vector.png')] flex
+    <div className="h-screen w-screen flex
     flex-col">
       
-     <header className='items-center  h-[15%] w-screen text-white font-inter 
+     <header className='items-center  h-[15%] w-screen text-white dark:text-black font-inter 
       gap-3 grid grid-cols-[auto_1fr_auto] pr-[5%] pl-[5%]'>
       <div className='justify-self-start
        items-center'>
@@ -34,7 +34,7 @@ const LandingPage =() => {
         </ul>
       </nav>
       <div className='justify-self-end items-center'>
- <Button label="Register" className={`bg-[#06B6D4] min-w-35 min-h-10 rounded-2xl text-black`} 
+ <Button label="Register" className={`bg-[#06B6D4] dark:bg-[#0B7B8C] min-w-35 min-h-10 rounded-2xl text-black dark:text-white`} 
       handleClick={'/Registration'}/>
   
 

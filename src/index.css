@@ -14,9 +14,15 @@
 
 
 @theme {
+   --background-image-light: url(./images/light.png);
+  --background-image-dark: url(./images/Vector.png);
+  --background-image-moon: url('./images/themecolormoon.svg');
+  --background-image-sun: url('./images/sunnew.png');
+  --color-light-text: #000000;
+  --color-dark-text: #f5f5f5;
   --font-inter: "Inter", sans-serif;
+    --font-irish: 'Irish Grover', cursive;
 }
 
-@theme {
-  --font-irish: 'Irish Grover', cursive;
-}
+
+@variant dark (&:where(.dark, .dark *));
