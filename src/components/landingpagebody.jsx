@@ -24,8 +24,8 @@ const LandingPageBody =() => {
                     <Button label="Register Now" 
                     className={`bg-[#06B6D4] dark:bg-[#0B7B8C] min-w-35 min-h-10 rounded-2xl text-black dark:text-white`} 
                     handleClick={'/Registration'}/>
-                    <Button label="Browse Employers" className={`bg-[#333333] dark:bg-[#CCCCCC] min-w-40 min-h-10 rounded-2xl text-[#C4C4C4]
-                        dark:text-black`}/>
+                    <Button label="Browse Employers" className={`bg-[#333333] dark:bg-[#CCCCCC] min-w-40 min-h-10 rounded-2xl 
+                     !text-[#C4C4C4]  dark:!text-black`}/>
                     </div>
                 </div> 
                 <div className=" min-w-[33%] mr-17">
