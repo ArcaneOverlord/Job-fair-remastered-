@@ -1,4 +1,5 @@
 import Button from "./Button";
+import RegisterForm from "./registerform";
 
 const RegisterBody = ({step}) => {
     return(
@@ -18,17 +19,17 @@ const RegisterBody = ({step}) => {
                 border-[#515151] dark:border-[#C2C2C2] !bg-[#0B1220] dark:!bg-[#E2E2E2]"/>
                       </div>
             </div>
-            <div className="flex flex-row ">
-                <div className="flex-1 flex justify-center items-center flex-col h-[100%]"> 
-                    <h3> 
+            <div className="flex flex-row h-full w-full">
+                <div className="flex-1 flex justify-center items-center flex-col h-[100%] w-[100%] my-auto"> 
+                    <h3 className="text-white dark:text-black text-2xl"> 
                         Step-{step}
                     </h3>
-                    <p>
+                    <p className="text-white dark:text-black ">
                        Fast,secure Registration, Book interview slots and join workshops. 
                     </p>
                 </div>
-                <div className="flex-1 items-center flex">
-                    <p>form section</p>
+                <div className="flex-1 my-auto flex flex-col justify-center items-center">
+                    <RegisterForm/>
                 </div>
             </div>
 
