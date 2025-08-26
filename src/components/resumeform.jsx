@@ -3,7 +3,7 @@ import Form from "./form";
 import Submit from "./submit";
 import Textarea from "./textarea";
 
-const ProfileForm = ({ onNext }) => {
+const ResumeForm = ({ onNext }) => {
   const [form, setForm] = useState({
     title: "",
     location: "",
@@ -93,4 +93,4 @@ const handleSubmit = (e) => {
   );
 };
 
-export default ProfileForm;
+export default ResumeForm;

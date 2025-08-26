@@ -22,7 +22,7 @@ const Router= createBrowserRouter([
 
 function App (){
   return(
-    <div className="h-screen w-screen  bg-dark dark:bg-light text-light-text dark:text-dark-text">
+    <div className="h-screen w-screen bg-[#071027] dark:bg-[#EAEEEE] bg-[url('/images/bg-light.png')] dark:bg-[url('/images/bg-dark.png')] bg-no-repeat bg-center bg-cover">
       
       <RouterProvider router={Router}/>
    

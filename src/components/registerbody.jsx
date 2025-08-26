@@ -53,10 +53,10 @@ return(
                 </div>
                 
      <div className="flex-1 my-auto flex flex-col justify-center ">
-        {current === 0&& <div><RegisterForm onclick={`/ProfileForm${next}`}/></div>}
-        {current === 1&& <div><ProfileForm/></div>}
-        {current === 2&& <div>resume goes here</div>}
-        {current === 3&& <div>preference goes here</div>}
+        {current === 0&& <div><RegisterForm onNext={next}/></div>}
+        {current === 1&& <div><ProfileForm onNext={next}/></div>}
+        {current === 2&& <div><ResumeForm onNext={next}/></div>}
+        {current === 3&& <div><PreferenceForm onNext={next}/></div>}
 
      </div>
             </div>

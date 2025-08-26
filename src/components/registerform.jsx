@@ -26,13 +26,20 @@ const RegisterForm = ({ onNext }) => {
     if (form.password !== form.reenterPassword)
       errs.reenterPassword = "Passwords do not match";
     setErrors(errs);
+    console.log("Validation errors:", errs); // Debug validation
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e) => {
+
+const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Form submitted, form data:", form); // Debug form data
+    console.log("onNext function:", onNext); // Debug onNext prop
     if (validate()) {
-      onNext(); // move to next step
+      console.log("Validation passed, calling onNext");
+      onNext();
+    } else {
+      console.log("Validation failed");
     }
   };
 
@@ -40,7 +47,7 @@ const RegisterForm = ({ onNext }) => {
     <div className="my-auto gap-4 w-full flex flex-col">
       <form
         onSubmit={handleSubmit}
-        autoComplete="off"
+        autoComplete="on"
         className="w-[100%] h-[100%] my-auto flex flex-col gap-1"
       >
         <Form
