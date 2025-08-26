@@ -14,10 +14,11 @@
 
 
 @theme {
-   --background-image-light: url('/images/light.png');
-  --background-image-dark: url('/images/Vector.png');
+   
   --background-image-moon: url('/images/themecolormoon.svg');
   --background-image-sun: url('/images/sunnew.png');
+   --background-light: theme(#071027.dark) url('/images/bg-light.png') no-repeat center/cover;
+  --background-dark: theme(#EAEEEE.light) url('/images/bg-dark.png') no-repeat center/cover;
   --color-light-text: #000000;
   --color-dark-text: #f5f5f5;
   --font-inter: "Inter", sans-serif;
@@ -26,3 +27,15 @@
 
 
 @variant dark (&:where(.dark, .dark *));
+
+
+
+/* Tailwind */
+* {
+  caret-color: transparent; /* hide cursor everywhere except input/textarea */
+}
+
+/* Or better */
+input, textarea {
+  caret-color: auto; /* keep cursor for actual inputs */
+}

@@ -35,7 +35,7 @@ const LandingPage =() => {
       </nav>
       <div className='justify-self-end items-center'>
  <Button label="Register" className={`bg-[#06B6D4] dark:bg-[#0B7B8C] min-w-35 min-h-10 rounded-2xl text-black dark:text-white`} 
-      handleClick={'/Registration'}/>
+      handleClick={'/Registrationdemo'}/>
   
 
       </div>

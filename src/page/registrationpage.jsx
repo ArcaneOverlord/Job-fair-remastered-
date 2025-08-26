@@ -1,6 +1,7 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";  
-import RegisterBody from "../components/registerbody";
+import RegistrationBody from "../components/registerbody";
+
 
 
 const RegistrationPage = () => {
@@ -11,7 +12,7 @@ const RegistrationPage = () => {
            <Navbar label="Login"/>
            </header>
              <main className=" justify-center">
-               <RegisterBody/>
+               <RegistrationBody/>
             </main>
             <footer className=" justify-self-end">
                 <Footer/>

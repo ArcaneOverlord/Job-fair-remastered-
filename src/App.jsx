@@ -2,7 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import LandingPage from "./page/landingpage";
 import RegistrationPage from "./page/registrationpage";
-import ThemeToggle from "./components/theme";
+import ProfileForm from "./components/profileform";
+
+
 
 
 const Router= createBrowserRouter([
@@ -12,8 +14,10 @@ const Router= createBrowserRouter([
   },
   {
     path:'/Registration',
-    element:<RegistrationPage/>
-  }
+    element:<RegistrationPage/>,
+
+  },
+ 
 ]);
 
 function App (){
@@ -22,7 +26,7 @@ function App (){
       
       <RouterProvider router={Router}/>
    
-   
+ 
     </div>
   
   )
