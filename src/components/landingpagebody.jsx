@@ -8,19 +8,24 @@ const LandingPageBody =() => {
    
     return(
         <div className="grid grid-rows-[1fr_auto_auto] gap-6">
-            <main className="flex justify-center flex-row min-h-[50vh]">
-                <div className="min-w-[50%] text-white dark:text-black justify-center flex flex-col ml-25">
-                    <h2 className="text-4xl mt-[-1]">National Hybrid Job Fair </h2>
+            <main className="flex flex-col md:flex-row md:min-h-[50vh] max-w-screen-xl mx-auto w-full px-4 gap-6">
+
+                <div className="min-h-[100vh] md:min-w-[50%] text-white dark:text-black justify-center flex flex-col 
+                                px-4 md:ml-25">
+                    <h2 className="text-3xl md:text-4xl mt-[-1]">National Hybrid Job Fair </h2>
                  
-                    <h3 className="text-[#5C5C5C] text-3xl">Sep 15-16,2025</h3>
-                    <p className="text-2xl text-[#CFCFCF] dark:text-black mt-5">Premium hybrid job fair- top companies,
+                    <h3 className="text-[#5C5C5C] text-2xl md:text-3xl">Sep 15-16,2025</h3>
+                    <p className="text-lg md:text-2xl text-[#CFCFCF] dark:text-black 
+                    break-words whitespace-normal mt-5">Premium hybrid job fair- top companies,
                         curated workshops,</p>
                        
                         <p className="text-2xl text-[#CFCFCF] dark:text-black">
                          portfolio reviews,and on- the -spot
                         interviews.
                     </p>
-                    <div className="flex flex-row gap-x-11 mt-4">
+                    <div className="flex flex-col md:flex-row 
+                    md:gap-x-11 gap-y-3
+                    mt-4">
                     <Button label="Register Now" 
                     className={`bg-[#06B6D4] dark:bg-[#0B7B8C] min-w-35 min-h-10 rounded-2xl text-black dark:text-white`} 
                     handleClick={'/Registration'}/>

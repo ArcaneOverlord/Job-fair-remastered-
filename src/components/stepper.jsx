@@ -32,7 +32,7 @@ function Stepper ({steps,current=0, onStepClick}) {
                             aria-current={status=== "active"? "step" : undefined}
                             aria-label={`step ${i+1}:${label}`}
                             className={cx(
-                                "px-4 rounded-lg border border-[#515151] text-base bg-[#0B1220] transition-color ",
+                                "px-4 rounded-lg border border-[#515151] text-base bg-[#0B1220] transition-color w-30 ",
                               
                                 status==="complete"&&
 

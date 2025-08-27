@@ -1,14 +1,12 @@
 import { useState } from "react";
 import Form from "./form";
 import Submit from "./submit";
-import Textarea from "./textarea";
+import FileUpload from "./fileupload";
 
 const ResumeForm = ({ onNext }) => {
   const [form, setForm] = useState({
-    title: "",
-    location: "",
-    about: "",
-    
+    resume: null, // store file object, not string
+    portfolio: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -17,20 +15,44 @@ const ResumeForm = ({ onNext }) => {
     setForm({ ...form, [field]: value });
   };
 
+  // ✅ Strict URL validator
+  const isValidUrl = (string) => {
+    try {
+      const url = new URL(string);
+      return url.protocol === "http:" || url.protocol === "https:";
+    } catch {
+      return false;
+    }
+  };
+
   const validate = () => {
     const errs = {};
-    if (!form.title.trim()) errs.title = "title is required";
-    if (!form.location.trim()) errs.location = "location is required";
+
+    // ✅ Resume validation
+   if (!form.resume) {
+  errs.resume = "Resume is required";
+} else if (form.resume.type !== "application/pdf") {
+  errs.resume = "Only PDF files are allowed";
+}
+
+
+    // ✅ Portfolio optional validation
+    if (form.portfolio.trim()) {
+      if (!isValidUrl(form.portfolio.trim())) {
+        errs.portfolio = "Invalid URL";
+      }
+    }
+
     setErrors(errs);
-    console.log("Validation errors:", errs); // Debug validation
+    console.log("Validation errors:", errs);
+
     return Object.keys(errs).length === 0;
   };
 
-
-const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted, form data:", form); // Debug form data
-    console.log("onNext function:", onNext); // Debug onNext prop
+    console.log("Form submitted, form data:", form);
+
     if (validate()) {
       console.log("Validation passed, calling onNext");
       onNext();
@@ -40,52 +62,37 @@ const handleSubmit = (e) => {
   };
 
   return (
-    <div className="my-auto gap-4 w-full flex flex-col">
+    <div className="my-auto gap-y-5 w-full flex flex-col">
       <form
         onSubmit={handleSubmit}
         autoComplete="on"
-        className="w-[100%] h-[100%] my-auto flex flex-col gap-1"
+        noValidate
+        className="w-full h-full my-auto flex flex-col gap-1"
       >
+        <FileUpload
+  id="resume"
+  label="Upload your Resume (PDF)"
+  value={form.resume}
+  onChange={(file) => handleChange("resume", file)} // get file object here
+  classLabel="text-white dark:text-black"
+  className="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white dark:text-black 
+   flex flex-col items-center justify-center cursor-pointer w-[70%] h-35 px-[5%]"
+/>
+{errors.resume && <p className="text-red-500">{errors.resume}</p>}
+
+
         <Form
-          label="Current Title"
-          id="title"
-          type="text"
-          value={form.title}
-          onChange={(e) => handleChange("title", e.target.value)}
+          label="Portfolio link"
+          id="portfolio"
+          type="url"
+          value={form.portfolio}
+          onChange={(e) => handleChange("portfolio", e.target.value)}
           classlabel="text-white dark:text-black"
-          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white dark:text-black w-[70%] px-[5%] h-10"
-          placeholder="Enter your current title if any"
+          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white dark:text-black 
+          w-[70%] px-[5%] h-10"
+          placeholder="Enter your portfolio link (optional)"
         />
-        {errors.title && <p className="text-red-500">{errors.title}</p>}
-
-        <Form
-          label="Location"
-          id="location"
-          type="text"
-          value={form.location}
-          onChange={(e) => handleChange("location", e.target.value)}
-          classlabel="text-white dark:text-black"
-          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white 
-          dark:text-black w-[70%] px-[5%] h-10"
-          placeholder="enter your location"
-        />
-        {errors.location && <p className="text-red-500">{errors.location}</p>}
-
-
-         <Textarea
-          label="About/Bio"
-          id="about"
-          type="text"
-          value={form.about}
-          onChange={(e) => handleChange("about", e.target.value)}
-          classlabel="text-white dark:text-black"
-          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl 
-          text-white dark:text-black w-[70%] h-[7rem] px-[5%] py-[1%] h-10 scrollbar-none"
-          placeholder="About/bio"
-        />
-        {errors.about && <p className="text-red-500">{errors.about}</p>}
-
-
+        {errors.portfolio && <p className="text-red-500">{errors.portfolio}</p>}
 
         <Submit value="Confirm" />
       </form>

@@ -2,6 +2,8 @@ import { useState } from "react";
 import Stepper from "./stepper";
 import RegisterForm from "./registerform";
 import ProfileForm from "./profileform";
+import ResumeForm from "./resumeform";
+import PreferenceForm from "./preferenceform";
 
 function RegistrationBody(){
 const steps=["Account","Profile","Resume","Preferences"];
