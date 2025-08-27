@@ -2,8 +2,8 @@
 
 const EmployerTemplate = ({compImg,alt,companyName,roles,compLocation}) => {
     return(
-        <div className="flex max-h-28 min-h-27 min-w-130 max-w-24 bg-[#0B1220] dark:bg-white rounded-2xl items-center text-white 
-        dark:text-black gap-13 pl-5">
+        <div className="flex max-h-28 min-h-27 min-w-full md:min-w-130 md:max-w-24 bg-[#0B1220] dark:bg-white rounded-2xl items-center text-white 
+        dark:text-black gap-3 md:gap-13 pl-5">
             <div className=" h-23 w-22 justify-center items-center overflow-hidden  bg-[#06B6D4] dark:bg-[#0B7B8C] rounded-full">
                 {compImg ?
                ( <img className="rounded-full flex object-cover h-full w-full"src={compImg} alt={alt}/>)
@@ -17,9 +17,17 @@ const EmployerTemplate = ({compImg,alt,companyName,roles,compLocation}) => {
 
             </div>
 
-            <div className="justify-center  flex flex-col ">
+            <div className="justify-center hidden md:flex flex-col  ">
                 <p className="text-2xl text-white dark:text-black">{companyName}</p>
                 <p className="text-[#D9D9D9] dark:text-[#323232] ">Open Roles:&nbsp;{roles}&nbsp;&nbsp; &bull; &nbsp;&nbsp;HQ:&nbsp;{compLocation}</p>
+
+            </div>
+
+            
+            <div className="justify-center w-full flex md:hidden flex-col pl-7 ">
+                <p className="text-2xl text-white dark:text-black ">{companyName}</p>
+                <p className="text-[#D9D9D9] dark:text-[#323232] ">Open Roles:&nbsp;{roles}</p>
+                 <p className="text-[#D9D9D9] dark:text-[#323232] ">HQ:&nbsp;{compLocation}</p>
 
             </div>
             

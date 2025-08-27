@@ -7,9 +7,9 @@ const LandingPage = () => {
   return (
     <div className="h-full w-full flex flex-col overflow-y-auto overflow-x-hidden">
       
-      <header className="items-center 
-        2xl:h-[15%] w-full text-white dark:text-black font-inter 
-        gap-3 grid grid-cols-[auto_1fr_auto] pr-[5%] pl-[5%] mt-3 ml-1.5">
+      <header className=" items-center 
+        min-h-[10%] w-full text-white dark:text-black font-inter 
+        gap-3 grid md:grid-cols-[auto_1fr_auto] pr-[5%] pl-[5%] mt-3 ml-1.5">
 
         <div className="justify-self-start items-center">
           <Title />
@@ -33,7 +33,7 @@ const LandingPage = () => {
         </div>
 
       </header>
-
+       
       <LandingPageBody />
     </div>
   );
