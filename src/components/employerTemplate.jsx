@@ -4,7 +4,7 @@ const EmployerTemplate = ({compImg,alt,companyName,roles,compLocation}) => {
     return(
         <div className="flex max-h-28 min-h-27 min-w-full md:min-w-130 md:max-w-24 bg-[#0B1220] dark:bg-white rounded-2xl items-center text-white 
         dark:text-black gap-3 md:gap-13 pl-5">
-            <div className=" h-23 w-22 justify-center items-center overflow-hidden  bg-[#06B6D4] dark:bg-[#0B7B8C] rounded-full">
+            <div className="  max-h-20 max-w-20 justify-center items-center overflow-hidden  bg-[#06B6D4] dark:bg-[#0B7B8C] rounded-full">
                 {compImg ?
                ( <img className="rounded-full flex object-cover h-full w-full"src={compImg} alt={alt}/>)
                : 

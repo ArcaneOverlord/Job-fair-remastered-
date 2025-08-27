@@ -33,19 +33,19 @@ const stepContent = [
 
 
 return(
-    <div className="flex flex-col bg-[#0B1220] dark:bg-white w-[90%] h-[100%] mx-auto rounded-2xl">
-        <h2 className="flex justify-self-start text-left text-white dark:text-black text-xl font-semibold ml-[5%] my-[1%]">Registration</h2>
+    <div className="flex flex-col bg-[#0B1220] dark:bg-white w-[90vw] h-[100%] mx-auto rounded-2xl">
+        <h2 className="flex justify-center md:justify-self-start text-left text-white dark:text-black text-xl font-semibold md:ml-[5%] my-[1%]">Registration</h2>
     
 
-    <div className="w-[75%] mx-auto">
+    <div className="w-[75%] mx-auto hidden md:flex">
      <Stepper
      steps={steps}
      current={current}
      onStepClick={setCurrent}/> 
      </div>
     
-      <div className="flex flex-row h-full w-full">
-                <div className="flex-1 flex justify-center items-center flex-col h-[100%] w-[100%] my-auto"> 
+      <div className="flex flex-col md:flex-row h-full w-full">
+                <div className="flex-1 flex md:justify-center items-center flex-col w-full max-h-15 md:h-[100%] md:w-[100%] mt-5 "> 
                     <h3 className="text-white dark:text-black text-2xl"> 
                         {stepContent[current].title}
                     </h3>
@@ -54,7 +54,7 @@ return(
                     </p>
                 </div>
                 
-     <div className="flex-1 my-auto flex flex-col justify-center ">
+     <div className="flex-1 flex flex-col justify-center items-center h-[100%] w-[100%]">
         {current === 0&& <div><RegisterForm onNext={next}/></div>}
         {current === 1&& <div><ProfileForm onNext={next}/></div>}
         {current === 2&& <div><ResumeForm onNext={next}/></div>}

@@ -2,6 +2,7 @@ import MenuItem from '../components/menuitem';
 import Button from '../components/Button';
 import LandingPageBody from "../components/landingpagebody";
 import Title from '../components/title';
+import Footer from '../components/footer';
 
 const LandingPage = () => {
   return (
@@ -33,8 +34,13 @@ const LandingPage = () => {
         </div>
 
       </header>
-       
+    
       <LandingPageBody />
+      
+      
+
+      
+     
     </div>
   );
 };

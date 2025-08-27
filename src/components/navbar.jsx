@@ -3,9 +3,9 @@ import Title from "./title";
 
 const Navbar = (props) => {
     return(
-        <div className="h-20 w-screen flex justify-between items-center pl-[5%] pr-[5%] gap-7 ">
+        <div className="min-h-[10%] max-w-[100vw] flex justify-between items-center pl-[5%] pr-[5%] gap-7 ">
             <Title className="flex justify-self-start"/>
-            <Button {...props} className="justify-self-end flex" />
+            <Button {...props} className="justify-self-end flex  w-30" />
         </div>
     )
 };
