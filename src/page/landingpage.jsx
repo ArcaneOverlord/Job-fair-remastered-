@@ -2,6 +2,7 @@ import MenuItem from '../components/menuitem';
 import Button from '../components/Button';
 import LandingPageBody from "../components/landingpagebody";
 import Title from '../components/title';
+import Hamburger from '../components/hamburger';
 
 
 const LandingPage = () => {
@@ -10,11 +11,14 @@ const LandingPage = () => {
       
       <header className=" items-center 
         min-h-[10%] w-full text-white dark:text-black font-inter 
-        gap-3 grid md:grid-cols-[auto_1fr_auto] pr-[5%] pl-[5%] mt-3 ml-1.5">
+        gap-3 grid grid-cols-[auto_auto] md:grid-cols-[auto_1fr_auto] pr-[5%] pl-[5%] mt-3 ml-1.5">
 
         <div className="justify-self-start items-center">
           <Title />
         </div>
+        <nav className='justify-self-end items-center m-3.5 md:hidden'>
+          <Hamburger/>
+        </nav>
 
         <nav className="justify-self-center hidden md:block">
           <ul className="flex flex-row gap-14">
