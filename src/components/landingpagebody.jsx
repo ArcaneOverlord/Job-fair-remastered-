@@ -4,7 +4,7 @@ import Footer from "./footer"
 
 const LandingPageBody = () => {
   return (
-    <div className="grid grid-rows-[1fr_auto_auto] gap-3">
+    <div className="grid grid-rows-[1fr_auto_auto] md:h-[100%] gap-3">
       <main className="flex flex-col md:flex-row md:min-h-[50vh]  max-w-[100vw] mx-auto w-full px-4 gap-6">
         <div className="md:min-h-[50vh] md:min-w-[50%]  text-white dark:text-black justify-center flex flex-col pt-15 pb-10 md:py-0 px-2 md:px-4  md:ml-24">
           <h2 className="text-3xl md:text-4xl mt-[-1]">National Hybrid Job Fair</h2>

@@ -2,11 +2,11 @@ import MenuItem from '../components/menuitem';
 import Button from '../components/Button';
 import LandingPageBody from "../components/landingpagebody";
 import Title from '../components/title';
-import Footer from '../components/footer';
+
 
 const LandingPage = () => {
   return (
-    <div className="h-full w-full flex flex-col overflow-y-auto overflow-x-hidden">
+    <div className="h-full w-full flex flex-col overflow-y-auto overflow-x-hidden scrollbar-none">
       
       <header className=" items-center 
         min-h-[10%] w-full text-white dark:text-black font-inter 

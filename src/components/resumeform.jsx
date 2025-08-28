@@ -76,7 +76,7 @@ const ResumeForm = ({ onNext }) => {
   onChange={(file) => handleChange("resume", file)} // get file object here
   classLabel="text-white dark:text-black"
   className="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white dark:text-black 
-   flex flex-col items-center justify-center cursor-pointer w-[70%] h-35 px-[5%]"
+   flex flex-col items-center justify-center cursor-pointer w-full md:w-[70%] h-35 px-[5%]"
 />
 {errors.resume && <p className="text-red-500">{errors.resume}</p>}
 
@@ -89,7 +89,7 @@ const ResumeForm = ({ onNext }) => {
           onChange={(e) => handleChange("portfolio", e.target.value)}
           classlabel="text-white dark:text-black"
           classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white dark:text-black 
-          w-[70%] px-[5%] h-10"
+          w-full md:w-[70%] px-[5%] h-10"
           placeholder="Enter your portfolio link (optional)"
         />
         {errors.portfolio && <p className="text-red-500">{errors.portfolio}</p>}

@@ -53,7 +53,7 @@ const handleSubmit = (e) => {
           value={form.title}
           onChange={(e) => handleChange("title", e.target.value)}
           classlabel="text-white dark:text-black"
-          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white dark:text-black w-[70%] px-[5%] h-10"
+          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white dark:text-black w-full md:w-[70%] px-[5%] h-10"
           placeholder="Enter your current title if any"
         />
         {errors.title && <p className="text-red-500">{errors.title}</p>}
@@ -66,7 +66,7 @@ const handleSubmit = (e) => {
           onChange={(e) => handleChange("location", e.target.value)}
           classlabel="text-white dark:text-black"
           classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white 
-          dark:text-black w-[70%] px-[5%] h-10"
+          dark:text-black w-full md:w-[70%] px-[5%] h-10"
           placeholder="enter your location"
         />
         {errors.location && <p className="text-red-500">{errors.location}</p>}
@@ -80,7 +80,7 @@ const handleSubmit = (e) => {
           onChange={(e) => handleChange("about", e.target.value)}
           classlabel="text-white dark:text-black"
           classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl 
-          text-white dark:text-black w-[70%] h-[7rem] px-[5%] py-[1%] h-10 scrollbar-none"
+          text-white dark:text-black w-full md:w-[70%] h-[7rem] px-[5%] py-[1%] h-10 scrollbar-none"
           placeholder="About/bio"
         />
         {errors.about && <p className="text-red-500">{errors.about}</p>}

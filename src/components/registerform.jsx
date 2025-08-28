@@ -86,7 +86,7 @@ const handleSubmit = (e) => {
         {errors.password && <p className="text-red-500">{errors.password}</p>}
 
         <Password
-          label="Re-Enter Password"
+          label="Re-enter Password"
           id="reenterpassword"
           value={form.reenterPassword}
           onChange={(e) => handleChange("reenterPassword", e.target.value)}
