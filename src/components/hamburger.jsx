@@ -38,7 +38,7 @@ function Hamburger() {
 >
   <ul className="flex flex-col justify-center items-center gap-14 text-white dark:text-black font-semibold">
     <li><MenuItem name="About" /></li>
-    <li><MenuItem name="Employers" /></li>
+    <li><MenuItem name="Employers" handleClick="/Employer login" /></li>
     <li><MenuItem name="Schedule" /></li>
     <li><MenuItem name="Speakers" /></li>
   </ul>

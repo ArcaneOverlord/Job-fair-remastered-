@@ -22,10 +22,10 @@ const LandingPage = () => {
 
         <nav className="justify-self-center hidden md:block">
           <ul className="flex flex-row gap-14">
-            <li><MenuItem name="About" /></li>
-            <li><MenuItem name="Employers" /></li>
-            <li><MenuItem name="Schedule" /></li>
-            <li><MenuItem name="Speakers" /></li>
+            <li><MenuItem name="About" handleClick="" /></li>
+            <li><MenuItem name="Employers" handleClick="/Employer login" /></li>
+            <li><MenuItem name="Schedule" handleClick="" /></li>
+            <li><MenuItem name="Speakers" handleClick="" /></li>
           </ul>
         </nav>
 

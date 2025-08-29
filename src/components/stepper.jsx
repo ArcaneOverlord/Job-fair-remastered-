@@ -26,7 +26,7 @@ function Stepper ({steps,current=0, onStepClick}) {
                     i<current? "complete" : i===current? "active" : "upcoming";
 
                     return(
-                        <li key={label} className="flex-1 flex justify-center">
+                        <li key={label} className=" flex">
                             <button type="button" 
                             onClick={() => onStepClick?.(i)}
                             aria-current={status=== "active"? "step" : undefined}

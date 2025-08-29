@@ -99,7 +99,7 @@ const handleSubmit = (e) => {
           placeholder="Re-Enter Password"
         />
         {errors.reenterPassword && <p className="text-red-500">{errors.reenterPassword}</p>}
-      <div className="flex justify-center">
+      <div className="flex justify-center md:justify-normal">
         <Submit value="Confirm" />
         </div>
       </form>

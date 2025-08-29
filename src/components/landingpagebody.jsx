@@ -24,7 +24,7 @@ const LandingPageBody = () => {
             />
             <Button
               label="Browse Employers"
-              className="bg-[#333333] dark:bg-[#CCCCCC]  !text-[#C4C4C4 min-w-full] dark:!text-black"
+              className="bg-[#333333] dark:bg-[#CCCCCC]  !text-[#C4C4C4 min-w-full dark:!text-black"
             />
           </div>
         </div>

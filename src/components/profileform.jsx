@@ -87,7 +87,7 @@ const handleSubmit = (e) => {
 
 
 
-        <div className="flex justify-center">
+        <div className="flex justify-center md:justify-normal">
         <Submit value="Confirm" />
         </div>
       </form>
