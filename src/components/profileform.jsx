@@ -44,7 +44,7 @@ const handleSubmit = (e) => {
       <form
         onSubmit={handleSubmit}
         autoComplete="on"
-        className="w-[100%] h-[100%] my-auto flex flex-col gap-1"
+        className="w-[80vw] md:w-full h-[100%] my-auto flex flex-col gap-1"
       >
         <Form
           label="Current Title"
@@ -87,7 +87,9 @@ const handleSubmit = (e) => {
 
 
 
+        <div className="flex justify-center">
         <Submit value="Confirm" />
+        </div>
       </form>
     </div>
   );

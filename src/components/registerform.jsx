@@ -48,7 +48,7 @@ const handleSubmit = (e) => {
       <form
         onSubmit={handleSubmit}
         autoComplete="on"
-        className="w-[70vw] h-[100%] my-auto flex flex-col gap-1"
+        className="w-[80vw] md:w-full h-[100%] my-auto justify-normal gap-1"
       >
         <Form
           label="Full Name"
@@ -57,7 +57,8 @@ const handleSubmit = (e) => {
           value={form.name}
           onChange={(e) => handleChange("name", e.target.value)}
           classlabel="text-white dark:text-black"
-          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white dark:text-black w-full md:w-[70%] px-[5%] h-10"
+          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl 
+          text-white dark:text-black w-full md:w-[70%] px-[5%] h-10"
           placeholder="Enter your full name"
         />
         {errors.name && <p className="text-red-500">{errors.name}</p>}
@@ -69,7 +70,8 @@ const handleSubmit = (e) => {
           value={form.email}
           onChange={(e) => handleChange("email", e.target.value)}
           classlabel="text-white dark:text-black"
-          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white dark:text-black  w-full md:w-[70%] px-[5%] h-10"
+          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl 
+          text-white dark:text-black  w-full md:w-[70%] px-[5%] h-10"
           placeholder="Enter your email"
         />
         {errors.email && <p className="text-red-500">{errors.email}</p>}
@@ -80,7 +82,8 @@ const handleSubmit = (e) => {
           value={form.password}
           onChange={(e) => handleChange("password", e.target.value)}
           classlabel="text-white dark:text-black"
-          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white dark:text-black  w-[85%] md:w-[40%] px-[5%] h-10"
+          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl 
+          text-white dark:text-black  w-[85%] md:w-[40%] px-[5%] h-10"
           placeholder="Password"
         />
         {errors.password && <p className="text-red-500">{errors.password}</p>}
@@ -91,7 +94,8 @@ const handleSubmit = (e) => {
           value={form.reenterPassword}
           onChange={(e) => handleChange("reenterPassword", e.target.value)}
           classlabel="text-white dark:text-black"
-          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl text-white dark:text-black  w-[85%] md:w-[40%] px-[5%] h-10"
+          classinput="bg-[#0B1220] dark:bg-[#E7E7E7] border border-[#515151] dark:border-[#D1D1D1] rounded-2xl 
+          text-white dark:text-black  w-[85%] md:w-[40%] px-[5%] h-10"
           placeholder="Re-Enter Password"
         />
         {errors.reenterPassword && <p className="text-red-500">{errors.reenterPassword}</p>}

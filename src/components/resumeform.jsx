@@ -67,7 +67,7 @@ const ResumeForm = ({ onNext }) => {
         onSubmit={handleSubmit}
         autoComplete="on"
         noValidate
-        className="w-full h-full my-auto flex flex-col gap-1"
+        className="w-[80vw] md:w-full h-[100%] my-auto flex flex-col gap-1"
       >
         <FileUpload
   id="resume"
@@ -94,7 +94,9 @@ const ResumeForm = ({ onNext }) => {
         />
         {errors.portfolio && <p className="text-red-500">{errors.portfolio}</p>}
 
+        <div className="flex justify-center md:justify-normal">
         <Submit value="Confirm" />
+        </div>
       </form>
     </div>
   );

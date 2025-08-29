@@ -20,7 +20,7 @@ function Stepper ({steps,current=0, onStepClick}) {
 
             {/* the boxes*/}
 
-            <ol className="relative z-10 flex items-center justify-evenly">
+            <ol className="relative z-10 flex items-center justify-between w-full">
                 {steps.map((label,i) => {
                     const status=
                     i<current? "complete" : i===current? "active" : "upcoming";

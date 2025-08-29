@@ -33,7 +33,7 @@ const LandingPage = () => {
           <Button 
             label="Login" 
             className="bg-[#06B6D4] dark:bg-[#0B7B8C] rounded-2xl text-black dark:text-white hidden md:block px-4 py-2"
-            handleClick={'/Registrationdemo'} 
+            handleClick={'/Login'} 
           />
         </div>
 

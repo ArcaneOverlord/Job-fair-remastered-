@@ -31,9 +31,12 @@ function Hamburger() {
 <div
   className={`${
     isOpen ? "fixed top-0 left-0 w-screen h-screen flex transition-all duration-500" : "hidden"
-  } bg-gray-500 z-10 justify-center items-center`}
+  }  bg-[#071027] dark:bg-[#EAEEEE]  
+  bg-no-repeat bg-center bg-cover 
+  [background-image:url('/images/dark.png')]
+  dark:[background-image:url('/images/light.png')] z-10 justify-center items-center`}
 >
-  <ul className="flex flex-col justify-center items-center gap-14">
+  <ul className="flex flex-col justify-center items-center gap-14 text-white dark:text-black font-semibold">
     <li><MenuItem name="About" /></li>
     <li><MenuItem name="Employers" /></li>
     <li><MenuItem name="Schedule" /></li>
