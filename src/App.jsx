@@ -4,6 +4,7 @@ import LandingPage from "./page/landingpage";
 import RegistrationPage from "./page/registrationpage";
 import LoginForm from "./components/loginform";
 import EmployerLoginForm from "./components/employerlogin";
+import EmployerList from "./page/browseemployerspage";
 
 
 
@@ -23,8 +24,12 @@ const Router= createBrowserRouter([
     element:<LoginForm/>
   },
   {
-    path:"/employer login",
+    path:"/Employer login",
     element:<EmployerLoginForm/>
+  },
+  {
+    path:"/Browse employers",
+    element:<EmployerList/>
   }
  
 ]);
