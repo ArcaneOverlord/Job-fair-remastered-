@@ -8,6 +8,8 @@ import { ThemeProvider } from "./components/themecontext.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <SpeedInsights>
+    <Analytics>
     <ThemeProvider>
     <App />
     </ThemeProvider>
