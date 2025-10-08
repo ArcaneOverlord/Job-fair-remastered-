@@ -8,12 +8,10 @@ import { ThemeProvider } from "./components/themecontext.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <SpeedInsights>
-    <Analytics>
+    <SpeedInsights />
+    <Analytics />
     <ThemeProvider>
     <App />
     </ThemeProvider>
-    <SpeedInsights />
-    <Analytics />
   </StrictMode>,
 )
